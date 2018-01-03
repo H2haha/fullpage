@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Document</title>
+
+<link rel="stylesheet" href="jquery.fullpage.css" type="text/css" />
+
+<style type="text/css">
+body{
+
+   color:#fff;
+
+}
+
+/* .section1{ background-color: green; } 
+ .section2{ background-color: orange; }
+ .section3{ background-color: gray; }
+ .section4{ background-color: red; }*/
+ .slide{
+
+      text-align: center;
+      font-size: 30px;
+
+ }
+#header{
+    position:fixed;
+    top:0;
+    right: 200px;
+}	
+#fullpageMenu{
+    position:fixed;
+    top: 0;
+    z-index: 999;
+}
+</style>
+</head>
+<body>
+<!--      <ul id="fullpageMenu">
+          <li data-menuanchor="page1" class="active">
+         <a href="#page1">section1</a>
+          </li>
+          <li data-menuanchor="page2" class="active">
+         <a href="#page2">section2</a>
+          </li>
+          <li data-menuanchor="page3" class="active">
+         <a href="#page3">section3</a>
+          </li>
+          <li data-menuanchor="page4" class="active">
+         <a href="#page4">section4</a>
+          </li>
+     </ul>
+    <div id="header">
+
+      Header
+
+    </div> -->
+         <div id="fullpage">
+              <div class="section section1"><h1>这是第一屏</h1></div>
+              <div class="section section2 ">
+                    <div class="slide">slide 1</div>
+                    <div class="slide">slide 2</div>
+                    <div class="slide">slide 3</div>
+                    <div class="slide">slide 4</div>
+              </div>
+              <div class="section section3 active">
+              <h1>这是第三屏</h1>
+
+    <p style="height:50000px">
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+ASsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+   </p>
+              </div>
+              <div class="section section4"><h1>这是第四屏</h1></div>
+         </div>
+<script src="jquery.min.js"></script>
+<script src="jquery.easings.min.js"></script>
+<script src="jquery.slimscroll.js"></script>
+<script src="jquery.fullpage.min.js"></script>
+<script>
+     $(document).ready(function() {
+               $('#fullpage').fullpage({
+                  sectionsColor:['green','orange','gray','red'],
+                  // controlArrows:false,//滚动箭头设置
+                 // verticalCentered:false,//每屏的文字居中显示
+                 // resize:true,//文字是否缩放大小
+                 // scrollingSpeed:2000//每屏的滚动速度
+                 anchors:['page1','page2','page3','page4'],//每屏的锚点
+                 lockAnchors:true,
+                 css3:true,//设置滚动动画
+                loopTop:true,
+                loopBottom:true,
+                loopHorizontal:true, //幻灯片的横向滚动恢复到第一屏
+                // autoScrolling:true,//是否使用滚动条
+                scrollBar:true,
+                paddingTop:'200px',
+                paddingBottom:'200px',
+                fixedElements:'#header',
+                 continuousVertical:true,
+                animateAnchor:false,
+                menu:'#fullpageMenu',
+                 navigation:true,
+                 navigationPosition:'right',
+                 navigationTooltips:['page1','page2','page3','page4'],
+                 showActiveTooltip:true,
+                 slidesNavigation:true,
+                 slidesNavPosition:'top',
+                 scrollOverflow: true
+
+               	});	
+     });
+     
+</script>
+</body>
+</html>
